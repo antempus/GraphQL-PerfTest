@@ -1,0 +1,6 @@
+[submodule "webapp"]
+	path = webapp
+	url = https://github.com/antempus/GraphQL-AppService.git
+[submodule "functionapp"]
+	path = functionapp
+	url = https://github.com/antempus/GraphQL-FunctionApp.git
