@@ -6,12 +6,12 @@ If you'd prefer to use manage the creation of resources, you can manage it with 
 
 - `terraform` v0.12
   - understand of how terrsform works will prevent any miss use or charges
-- Azure Subscription (with one of the following)
-  - [Service Principle](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html)
-  - [Azure CLI & Login](https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html)
+- Azure Subscription
+  - set up [Service Principle](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html)
 - Azure Resources:
   - Existing Cosmos DB and Resource Group
     - we'll use as the DB Account can take a long time to create/destroy
+    - allows for the free tier to be used
 
 ### Setup
 
