@@ -36,3 +36,14 @@ variable "docker_config" {
 variable "tenant_id" {
   type = string
 }
+
+variable "app_plan_tier" {
+  description = "App Plan sku"
+  type        = string
+
+}
+variable "app_plan_size" {
+  description = "App Plan sku"
+  type        = string
+
+}

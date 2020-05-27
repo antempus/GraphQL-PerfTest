@@ -32,8 +32,8 @@ resource "azurerm_app_service_plan" "function_app_plan" {
   kind                = "Linux"
   reserved            = true
   sku {
-    tier = "Basic"
-    size = "B3"
+    tier = var.app_plan_tier
+    size = var.app_plan_size
   }
 }
 

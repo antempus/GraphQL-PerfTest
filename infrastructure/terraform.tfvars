@@ -7,3 +7,11 @@
 # docker_functionapp_image = "<image for app service>"
 # image_tag = "<tag name, defaults to latest if unset>"
 
+resource_group_name      = "antempus-tek"
+cosmos_name              = "at-cosmos-db"
+prefix                   = "anttek"
+location                 = "westus"
+docker_name              = "antempus"
+docker_appservice_image  = "graphql-appservice"
+docker_functionapp_image = "graphql-functionapp"
+image_tag                = "latest"

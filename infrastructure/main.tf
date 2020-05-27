@@ -29,6 +29,8 @@ module "function_app" {
   prefix              = var.prefix
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
+  app_plan_tier       = var.app_plan_tier
+  app_plan_size       = var.app_plan_size
   cosmos_conn_string  = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault.keyvault.vault_uri}secrets/${azurerm_key_vault_secret.cosmos_conn_string.name}/${azurerm_key_vault_secret.cosmos_conn_string.version})"
   key_vault_id        = azurerm_key_vault.keyvault.id
   docker_config       = "DOCKER|${var.docker_name}/${var.docker_functionapp_image}:${var.image_tag}"
@@ -40,6 +42,8 @@ module "app_service" {
   prefix              = var.prefix
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
+  app_plan_tier       = var.app_plan_tier
+  app_plan_size       = var.app_plan_size
   cosmos_conn_string  = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault.keyvault.vault_uri}secrets/${azurerm_key_vault_secret.cosmos_conn_string.name}/${azurerm_key_vault_secret.cosmos_conn_string.version})"
   key_vault_id        = azurerm_key_vault.keyvault.id
   docker_config       = "DOCKER|${var.docker_name}/${var.docker_appservice_image}:${var.image_tag}"
