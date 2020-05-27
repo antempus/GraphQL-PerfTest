@@ -48,7 +48,7 @@ If you update the `app_plan_tier` and `app_plan_size`, you'll either need to `de
 
 ### **_Oh No_**
 
-So you've gone an broke something or some how borked your state file: No to worry, there is a reason for only a single `azurerm_resource_group` and not use anything already existing to deploy new resources. We'll just have to remove everything created by terraform and remove the state file locally.
+So you've gone an broke something or some how borked your state files: Not to worry, there is a reason for only a single `azurerm_resource_group` and not use anything already existing to deploy new resources. We'll just have to remove everything created by terraform and remove the state file locally.
 
 ##### Manual Cleanup
 
