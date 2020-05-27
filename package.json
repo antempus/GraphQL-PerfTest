@@ -1,23 +1,32 @@
 {
-  "name": "GraphQL-PerfTest",
+  "name": "graqhql-perftest",
   "version": "0.1.0",
   "description": "Meta repo for creating resources in Azure Cloud via Terraform, creating docker images to run in Azure, and the scripts to run against the deployed resources",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "populate": "node -r dotenv/config perf_tests/populate.js",
+    "webapp": "node -r dotenv/config perf_tests/webapp.perf.js",
+    "functionapp": "node -r dotenv/config perf_tests/functionapp.perf.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antempus/GraphQL-PerfTest.git"
   },
   "keywords": [],
-  "author": "Robert Steele <stryakr@gmail.com>",
-  "license": "ISC",
+  "author": "Robert N Steele <rosteele@antempus.dev>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/antempus/GraphQL-PerfTest/issues"
   },
   "homepage": "https://github.com/antempus/GraphQL-PerfTest#readme",
   "dependencies": {
-    "autocannon": "^4.6.0"
+    "autocannon": "^4.6.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
   }
 }
