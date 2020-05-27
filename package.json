@@ -4,9 +4,9 @@
   "description": "Meta repo for creating resources in Azure Cloud via Terraform, creating docker images to run in Azure, and the scripts to run against the deployed resources",
   "main": "index.js",
   "scripts": {
-    "populate": "node -r dotenv/config perf_tests/populate.js",
-    "webapp": "node -r dotenv/config perf_tests/webapp.perf.js",
-    "functionapp": "node -r dotenv/config perf_tests/functionapp.perf.js"
+    "populate": "node -r dotenv/config scripts/populate.js",
+    "webapp": "node -r dotenv/config scripts/webapp.perf.js",
+    "functionapp": "node -r dotenv/config scripts/functionapp.perf.js"
   },
   "repository": {
     "type": "git",
