@@ -39,20 +39,27 @@ The [variables.tf](./variables.tf) file declares all of the variables that `terr
 
 `terraform apply` will start the process to build out our infrastructure with one approval step from the user. Once this process starts, it _can_ take a long time to generate the resources; since we've used a previously generated CosmosDB Account, we will save a chunk of time; it can take ~7 minutes to create.
 
+_note_
+If you update the `app_plan_tier` and `app_plan_size`, you'll either need to `destroy` and `apply` the entire infrastructure or run apply twice. For some reason, likely due to the way I implemented the modules and keyvault, the access policies are removed when during the first run.
+
 #### Destroy
 
 `terraform destroy` will predicably destroy all the resources that we've created, but any previously created ones will persist; Like the `apply` process, this takes a few minutes to complete. This should generally be used if you don't want to keep paying for resources after you've completed the perf-testing or any other usage.
 
-### ***Oh No***
+### **_Oh No_**
+
 So you've gone an broke something or some how borked your state file: No to worry, there is a reason for only a single `azurerm_resource_group` and not use anything already existing to deploy new resources. We'll just have to remove everything created by terraform and remove the state file locally.
 
 ##### Manual Cleanup
 
 ###### delete azure resource group
+
 - navigate to the [portal](https://portal.azure.com) and find the resource group you've created and delete it; it will be shaped like **`${prefix}-rg`**
 
 ###### remove state files
+
 - delete both `terraform.tfstate` and `terraform.tfstate.backup`
 
-###### revert back 
+###### revert back
+
 - `git reset HEAD` to undo any file changes (not recoverable)
