@@ -6,9 +6,9 @@ Meta repo for creating resources in Azure Cloud via Terraform, creating docker i
 
 Each folder contains a README that will help instrument the work to build out the required Docker images and Azure infrastructure:
 
-[Function App](./functionapp/README.md)
-[Web App](./functionapp/README.md)
-[Infrastructure](./functionapp/README.md)
+[Function App](./functionapp/README.md)  
+[Web App](./functionapp/README.md)  
+[Infrastructure](./functionapp/README.md)  
 
 #### Users
 
