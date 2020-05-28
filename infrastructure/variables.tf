@@ -62,6 +62,6 @@ variable "app_plan_size" {
   description = "App Plan sku"
 
   type    = string
-  default = "B3"
+  default = "B1"
 
 }
