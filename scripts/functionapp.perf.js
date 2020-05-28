@@ -3,7 +3,8 @@ const autocannon = require('autocannon');
 
 const {
   env: {
-    functionapp_url: url, connections = 400, duration = 30, overallRate = 400,
+    functionapp_url: url, connections = 50, duration = 30, connectionRate = 40,
+
   },
 } = process;
 
@@ -34,7 +35,7 @@ autocannon.track(autocannon({
   url,
   connections,
   duration,
-  overallRate,
+  connectionRate,
   setupClient,
 }, console.log), {
   renderLatencyTable: true,
